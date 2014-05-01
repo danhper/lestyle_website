@@ -1,15 +1,16 @@
 Rails.application.routes.draw do
   root to: 'static_pages#index'
 
+  get 'menu', to: 'menu#show'
+
   namespace :static_pages, path: '', as: '' do
     get 'about'
-    get 'menu'
     get 'contact'
   end
 
   devise_for :admins
 
-  devise_scope :admin do
+  devise_scope :admins do
     get "login", :to => 'devise/sessions#new'
   end
 

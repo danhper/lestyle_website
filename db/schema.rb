@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140501183304) do
+ActiveRecord::Schema.define(version: 20140501185552) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,21 +26,27 @@ ActiveRecord::Schema.define(version: 20140501183304) do
   add_index "admins", ["email"], name: "index_admins_on_email", unique: true, using: :btree
 
   create_table "categories", force: true do |t|
-    t.string   "name"
+    t.string   "name",                   null: false
+    t.integer  "order",      default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "menu_entries", force: true do |t|
+  create_table "foods", force: true do |t|
     t.string   "name"
     t.text     "description"
     t.string   "image"
-    t.integer  "category_id"
     t.integer  "price"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "menu_entries", ["category_id"], name: "index_menu_entries_on_category_id", using: :btree
+  create_table "foods_have_categories", id: false, force: true do |t|
+    t.integer "food_id"
+    t.integer "category_id"
+  end
+
+  add_index "foods_have_categories", ["food_id", "category_id"], name: "index_foods_have_categories_on_food_id_and_category_id", using: :btree
+  add_index "foods_have_categories", ["food_id"], name: "index_foods_have_categories_on_food_id", using: :btree
 
 end

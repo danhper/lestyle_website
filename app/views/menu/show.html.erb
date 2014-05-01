@@ -1,0 +1,13 @@
+<div class="content">
+  <div class="container">
+    <div class="row">
+      <div class="grid_12">
+        <h3 class="mb0">our menu</h3>
+        <%= render 'menu/filters' %>
+        <div class="el gallery" id="container">
+          <%= render partial: 'menu/food', collection: @foods, as: :food %>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="<%= item_class(food) %>">
+  <div>
+    <%= link_to food.image.url, class: 'gal' do %>
+      <%= image_tag food.image.thumb.url, height: '195px' %>
+    <% end %>
+    <a href="#">
+      <%= food.name %>
+    </a>
+      <div class="price"><span>¥</span><%= food.price %></div>
+    </div>
+  </div>

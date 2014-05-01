@@ -1,0 +1,12 @@
+<section id="options" class="clearfix">
+  <ul id="filters" class="option-set clearfix" data-option-key="filter">
+    <li><a href="#filter" data-option-value="*" class="selected">all</a></li>
+    <% @categories.each do |c| %>
+      <li>
+        <a href="#filter" data-option-value=".<%= category_class(c) %>">
+          <%= c.name %>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+</section>

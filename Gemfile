@@ -16,6 +16,7 @@ gem 'devise'
 gem 'rails_admin'
 
 gem 'carrierwave'
+gem 'mini_magick'
 
 group :development, :test do
   gem 'annotate'
