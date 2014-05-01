@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  host: localhost
+  port: 5432
+  username: lestyle
+  password: foobar
+
+development:
+  <<: *default
+  database: lestyle_website_development
+
+test:
+  <<: *default
+  database: lestyle_website_test
+
+production:
+  <<: *default
+  database: lestyle_website_production
+  username: lestyle
+  password: <%= ENV['LESTYLE_DATABASE_PASSWORD'] %>
