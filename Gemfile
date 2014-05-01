@@ -15,7 +15,10 @@ gem 'devise'
 
 gem 'rails_admin'
 
+gem 'carrierwave'
+
 group :development, :test do
+  gem 'annotate'
   gem 'spring'
   gem 'jazz_hands'
   gem 'better_errors'

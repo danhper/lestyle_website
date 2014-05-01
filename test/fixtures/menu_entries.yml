@@ -1,0 +1,29 @@
+# == Schema Information
+#
+# Table name: menu_entries
+#
+#  id          :integer          not null, primary key
+#  name        :string(255)
+#  description :text
+#  image       :string(255)
+#  category_id :integer
+#  price       :integer
+#  created_at  :datetime
+#  updated_at  :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  small_image: MyString
+  large_image: MyString
+  category_id: 1
+
+two:
+  name: MyString
+  description: MyText
+  small_image: MyString
+  large_image: MyString
+  category_id: 1
