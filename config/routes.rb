@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   root to: 'static_pages#index'
 
-  scope :static_pages, controller: 'static_pages' do
+  namespace :static_pages, path: '', as: '' do
     get 'about'
+    get 'menu'
+    get 'contact'
   end
 
   devise_for :admins
