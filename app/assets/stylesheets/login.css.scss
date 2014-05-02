@@ -1,9 +1,11 @@
-.new_admin {
-  width: 50%;
+.container.login {
+  width: 40%;
   margin: auto;
-}
 
-.new_admin ~ h2 {
-  width: 50%;
-  margin: auto;
+  .btn {
+    -webkit-border-radius: 12px ! important;
+    -moz-border-radius: 12px ! important;
+    border-radius: 12px ! important;
+    background-color: #c2d7ec;
+  }
 }
