@@ -3,6 +3,9 @@ Rails.application.routes.draw do
 
   get 'menu', to: 'menu#show'
 
+  get 'blog', to: 'posts#index'
+  resources :posts, only: [:show]
+
   namespace :static_pages, path: '', as: '' do
     get 'about'
     get 'contact'

@@ -18,9 +18,18 @@ gem 'rails_admin'
 gem 'carrierwave'
 gem 'mini_magick'
 
+gem 'rails-i18n'
+gem 'rails_admin-i18n'
+gem 'devise-i18n'
+
+
 group :development, :test do
   gem 'annotate'
   gem 'spring'
   gem 'jazz_hands'
+end
+
+group :development do
+  gem 'guard-livereload', require: false
   gem 'better_errors'
 end
