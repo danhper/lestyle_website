@@ -32,3 +32,17 @@ PagesText.find_or_create_by(identifier: 'about_content') do |p|
 キューバ人プロデュースの野菜いっぱいヘルシーなお料理 モヒートを楽しみながら　カリブ旅行気分を楽しんでください。
 サルサイベントの参加もいかがでしょうか。'
 end
+
+PagesText.find_or_create_by(identifier: 'language_school') do |p|
+  p.content = '語学学校の説明文'
+end
+
+4.times do |i|
+  PagesText.find_or_create_by(identifier: "why_us_title_#{i + 1}") do |p|
+    p.content = "理由#{i + 1}"
+  end
+
+  PagesText.find_or_create_by(identifier: "why_us_content_#{i + 1}") do |p|
+    p.content = "我々を選ぶ理由#{i + 1}"
+  end
+end

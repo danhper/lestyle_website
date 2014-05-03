@@ -16,13 +16,9 @@
         <%= link_to 'more', blog_path(events: true), class: 'btn' %>
       </div>
       <div class="grid_4">
-        <h3>testimonials</h3>
-        <blockquote class="bq1">
-          <p>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nas cetur ridiculus mus. </p>
-          Donec quam felis, nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo rhoncus ut, imperdiet a, venenatis vitanullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.
-          <div class="col3">Jessica Priston, USA</div>
-        </blockquote>
-        <a href="#" class="btn">more</a>
+        <h3>language school</h3>
+        <%= simple_format @language_school_content.content %>
+        <!-- <a href="#" class="btn">more</a> -->
       </div>
     </div>
   </div>

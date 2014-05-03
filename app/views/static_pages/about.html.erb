@@ -23,34 +23,15 @@
       </div>
       <div class="clear"></div>
       <ul class="list1">
-        <li class="grid_6 maxheight">
-          <div class="count">01.</div>
-          <div class="extra_wrapper">
-            <div class="title"><a href="#">Lorem ipsum dolor sit amet</a></div>
-            Praesent vestibulum molestie lacus. Aenean nonummy endrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio.
-          </div>
-        </li>
-        <li class="grid_6 maxheight">
-          <div class="count">02.</div>
-          <div class="extra_wrapper">
-            <div class="title"><a href="#">Aliquam dapibus tincidunt metus. Praesent justo dolor, lobortis quis, lobortis dignissim.</a></div>
-            Praesent vestibulum molestie lacus. Aenean nonummy endrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio.
-          </div>
-        </li>
-        <li class="grid_6 maxheight mb0">
-          <div class="count">03.</div>
-          <div class="extra_wrapper">
-            <div class="title"><a href="#">Sed in lacus ut enim adipiscing aliquet. Nulla venenatis. In pede mi, aliquet sit amet, uismod in, auctor ut, ligula.</a></div>
-            Praesent vestibulum molestie lacus. Aenean nonummy endrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur.
-          </div>
-        </li>
-        <li class="grid_6 maxheight mb0">
-          <div class="count">04.</div>
-          <div class="extra_wrapper">
-            <div class="title"><a href="#">Donec sagittis euismod purus</a></div>
-            Praesent vestibulum molestie lacus. Aenean nonummy endrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio.
-          </div>
-        </li>
+        <% 4.times do |i| %>
+          <li class="grid_6 maxheight">
+            <div class="count">0<%= i + 1%>.</div>
+            <div class="extra_wrapper">
+              <div class="title"><%= simple_format @reasons[i].content, {}, wrapper_tag: 'span' %></div>
+              <%= simple_format @contents[i].content %>
+            </div>
+          </li>
+        <% end %>
       </ul>
     </div>
   </div>

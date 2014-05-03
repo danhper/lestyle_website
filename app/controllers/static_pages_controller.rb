@@ -6,11 +6,14 @@ class StaticPagesController < ApplicationController
 
     @about_title = PagesText.find_by(identifier: 'about_short_title')
     @about_content = PagesText.find_by(identifier: 'about_short_content')
+    @language_school_content = PagesText.find_by(identifier: 'language_school')
   end
 
   def about
     @about_title = PagesText.find_by(identifier: 'about_title')
     @about_content = PagesText.find_by(identifier: 'about_content')
+    @reasons = PagesText.where("identifier like ?", 'why_us_title_%').order(:id)
+    @contents = PagesText.where("identifier like ?", 'why_us_content%').order(:id)
   end
 
   def contact
