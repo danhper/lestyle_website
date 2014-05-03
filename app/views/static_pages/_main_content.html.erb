@@ -4,17 +4,10 @@
       <div class="grid_4">
         <h3>about us</h3>
 
-        <p class="st1">Café Styleと改名しおしゃれなガストロカフェに<br>大変身
+        <p class="st1">
+          <%= simple_format @about_title.content, {}, wrapper_tag: 'span' %>
         </p>
-        <p>
-        自家焙煎で香高いフレッシュなコーヒー、すっきりした味へのこだわりを大切にしています。<br>
-        荻窪ブレンド　すずらんブレンド　ほろ苦ブレンドその他ストレートコーヒーの販売、イチジク入りの焼きチースケーキ、ガトーアラバナーヌ等、当店オリジナルケーキはすべてホームメイド　豆乳使用して軽やかな味です。
-        </p>
-
-        新たにキューバランチを始めます。<br>
-        キューバ人プロデュースの野菜いっぱいヘルシーなお料理
-        モヒートを楽しみながら　カリブ旅行気分を楽しんでください。<br>
-        サルサイベントの参加もいかがでしょうか。<br>
+        <%= simple_format @about_content.content %>
         <%= link_to 'more', about_path, class: 'btn' %>
       </div>
       <div class="grid_4">
