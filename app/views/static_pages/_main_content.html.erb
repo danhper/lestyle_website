@@ -20,7 +20,7 @@
       <div class="grid_4">
         <h3>events</h3>
         <%= render partial: 'posts/event', collection: @events, as: :event %>
-        <a href="#" class="btn">more</a>
+        <%= link_to 'more', blog_path(events: true), class: 'btn' %>
       </div>
       <div class="grid_4">
         <h3>testimonials</h3>

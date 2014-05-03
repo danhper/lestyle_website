@@ -2,7 +2,11 @@
   <div class="container">
     <div class="row">
       <div class="grid_12">
-        <h3>ブログ</h3>
+        <% if @is_event %>
+          <h3>Events</h3>
+        <% else %>
+          <h3>Blog</h3>
+        <% end %>
         <%= render @posts %>
       </div>
     </div>
