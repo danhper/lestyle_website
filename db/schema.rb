@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140503103901) do
+ActiveRecord::Schema.define(version: 20140503105200) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,7 +39,10 @@ ActiveRecord::Schema.define(version: 20140503103901) do
     t.integer  "price"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "is_on_top_page", default: false
   end
+
+  add_index "foods", ["is_on_top_page"], name: "index_foods_on_is_on_top_page", using: :btree
 
   create_table "foods_have_categories", id: false, force: true do |t|
     t.integer "food_id"

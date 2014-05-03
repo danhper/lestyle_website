@@ -19,7 +19,7 @@
       </div>
       <div class="grid_4">
         <h3>events</h3>
-        <%= render 'posts/event', event: @events.first %>
+        <%= render partial: 'posts/event', collection: @events, as: :event %>
         <a href="#" class="btn">more</a>
       </div>
       <div class="grid_4">
