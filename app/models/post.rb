@@ -8,6 +8,7 @@
 #  image      :string(255)
 #  created_at :datetime
 #  updated_at :datetime
+#  is_event   :boolean          default(FALSE)
 #
 
 class Post < ActiveRecord::Base

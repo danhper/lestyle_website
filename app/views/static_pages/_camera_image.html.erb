@@ -1,0 +1,9 @@
+<div data-src="<%= top_image.image.url %>">
+  <div class="caption fadeIn">
+    <h2><%= top_image.title %></h2>
+    <p>
+      <%= top_image.content %>
+    </p>
+    <%= link_to 'メニュー', menu_path, data: { no_turbolink: true } %>
+  </div>
+</div>

@@ -1,14 +1,13 @@
 # == Schema Information
 #
-# Table name: posts
+# Table name: top_images
 #
 #  id         :integer          not null, primary key
-#  title      :string(255)      not null
+#  title      :string(255)
 #  content    :text
 #  image      :string(255)
 #  created_at :datetime
 #  updated_at :datetime
-#  is_event   :boolean          default(FALSE)
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

@@ -2,13 +2,14 @@
 #
 # Table name: foods
 #
-#  id          :integer          not null, primary key
-#  name        :string(255)
-#  description :text
-#  image       :string(255)
-#  price       :integer
-#  created_at  :datetime
-#  updated_at  :datetime
+#  id             :integer          not null, primary key
+#  name           :string(255)
+#  description    :text
+#  image          :string(255)
+#  price          :integer
+#  created_at     :datetime
+#  updated_at     :datetime
+#  is_on_top_page :boolean          default(FALSE)
 #
 
 class Food < ActiveRecord::Base
