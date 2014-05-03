@@ -33,4 +33,17 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+
+  config.model 'PagesImage' do
+    edit do
+      exclude_fields :identifier
+    end
+  end
+
+  config.model 'PagesText' do
+    edit do
+      exclude_fields :identifier
+    end
+  end
+
 end
