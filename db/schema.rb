@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140502050118) do
+ActiveRecord::Schema.define(version: 20140503103901) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,11 +50,14 @@ ActiveRecord::Schema.define(version: 20140502050118) do
   add_index "foods_have_categories", ["food_id"], name: "index_foods_have_categories_on_food_id", using: :btree
 
   create_table "posts", force: true do |t|
-    t.string   "title",      null: false
+    t.string   "title",                      null: false
     t.text     "content"
     t.string   "image"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "is_event",   default: false
   end
+
+  add_index "posts", ["is_event"], name: "index_posts_on_is_event", using: :btree
 
 end

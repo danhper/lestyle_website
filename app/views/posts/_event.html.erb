@@ -1,0 +1,16 @@
+<div class="block1">
+  <time datetime="2014-01-01">
+    <%= event.created_at.strftime('%d') %>
+    <span>
+      <span class="col1"><%= event.created_at.strftime('%-m') %>月</span>
+      <span><%= event.created_at.strftime('%Y') %></span>
+    </span>
+  </time>
+  <div class="extra_wrapper">
+    <div class="text1 col2">
+      <%= link_to event.title, event %>
+    </div>
+    <%= simple_format event.content %>
+    <%= link_to 'more info', event, class: 'col3 td' %>
+  </div>
+</div>

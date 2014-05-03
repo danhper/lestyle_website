@@ -1,0 +1,36 @@
+<div class="content">
+  <div class="container">
+    <div class="row">
+      <div class="grid_4">
+        <h3>about us</h3>
+
+        <p class="st1">Café Styleと改名しおしゃれなガストロカフェに<br>大変身
+        </p>
+        <p>
+        自家焙煎で香高いフレッシュなコーヒー、すっきりした味へのこだわりを大切にしています。<br>
+        荻窪ブレンド　すずらんブレンド　ほろ苦ブレンドその他ストレートコーヒーの販売、イチジク入りの焼きチースケーキ、ガトーアラバナーヌ等、当店オリジナルケーキはすべてホームメイド　豆乳使用して軽やかな味です。
+        </p>
+
+        新たにキューバランチを始めます。<br>
+        キューバ人プロデュースの野菜いっぱいヘルシーなお料理
+        モヒートを楽しみながら　カリブ旅行気分を楽しんでください。<br>
+        サルサイベントの参加もいかがでしょうか。<br>
+        <%= link_to 'more', about_path, class: 'btn' %>
+      </div>
+      <div class="grid_4">
+        <h3>events</h3>
+        <%= render 'posts/event', event: @events.first %>
+        <a href="#" class="btn">more</a>
+      </div>
+      <div class="grid_4">
+        <h3>testimonials</h3>
+        <blockquote class="bq1">
+          <p>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nas cetur ridiculus mus. </p>
+          Donec quam felis, nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo rhoncus ut, imperdiet a, venenatis vitanullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.
+          <div class="col3">Jessica Priston, USA</div>
+        </blockquote>
+        <a href="#" class="btn">more</a>
+      </div>
+    </div>
+  </div>
+</div>

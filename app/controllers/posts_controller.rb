@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_filter :find_post
 
   def index
-    @posts = Post.limit(5)
+    @posts = Post.where(is_event: false).limit(5)
   end
 
   def show
