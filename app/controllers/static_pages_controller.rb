@@ -14,6 +14,8 @@ class StaticPagesController < ApplicationController
     @about_content = PagesText.find_by(identifier: 'about_content')
     @reasons = PagesText.where("identifier like ?", 'why_us_title_%').order(:id)
     @contents = PagesText.where("identifier like ?", 'why_us_content%').order(:id)
+
+    @top_image = PagesImage.find_by(identifier: 'about_top_image')
   end
 
   def contact

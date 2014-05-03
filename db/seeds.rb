@@ -46,3 +46,6 @@ end
     p.content = "我々を選ぶ理由#{i + 1}"
   end
 end
+
+
+PagesImage.find_or_create_by(identifier: "about_top_image")

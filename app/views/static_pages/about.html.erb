@@ -3,7 +3,7 @@
     <div class="row">
       <div class="grid_12">
         <h3>About our cafe</h3>
-        <%= image_tag "page2_img.jpg", class: "img_inner fleft" %>
+        <%= image_tag @top_image.image.url, class: "img_inner fleft", width: '382px', height: '318px' %>
         <div class="extra_wrapper">
           <div class="text1 col2">
             <%= simple_format @about_title.content, {}, wrapper_tag: 'span' %>
