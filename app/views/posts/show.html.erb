@@ -5,11 +5,21 @@
         <h3><%= @post.title %></h3>
         <div class="block1 blog">
           <time datetime="2014-01-01">
-            <%= @post.created_at.strftime('%d') %>
+            <%= @post.get_date.strftime('%d') %>
             <span>
-              <span class="col1"><%= @post.created_at.strftime('%-m') %>月</span>
-              <span><%= @post.created_at.strftime('%Y') %></span>
+              <span class="col1"><%= @post.get_date.strftime('%-m') %>月</span>
+              <span><%= @post.get_date.strftime('%Y') %></span>
             </span>
+            <% if @post.is_event %>
+              <span class="time">
+                <span class="hour">
+                  <%= @post.get_date.strftime('%k') %>
+                </span>
+                <span class="minute">
+                  <%= @post.get_date.strftime('%M') %>
+                </span>
+              </span>
+            <% end %>
           </time>
           <%= image_tag @post.image.thumb.url, alt: "", class: "img_inner fleft" %>
           <div class="extra_wrapper">
