@@ -1137,6 +1137,12 @@ h2 {
 }
 
 
+.tb1 .extra_wrapper {
+    p {
+        color: $foreground-color;
+    }
+}
+
 .extra_wrapper {
     .text1 {
         font-size: 16pt;
@@ -1144,7 +1150,6 @@ h2 {
 
     p {
         font-size: 14pt;
-        color: $foreground-color;
     }
 }
 
