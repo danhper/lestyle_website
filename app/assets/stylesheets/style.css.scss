@@ -1153,3 +1153,13 @@ footer .fright address {
     font-size: 16pt;
     color: $foreground-color;
 }
+
+.main-title a {
+    padding-top: 50px;
+    margin-bottom: -50px;
+    vertical-align: center;
+    font-size: 56pt;
+    color: #000000;
+    line-height: inherit;
+    text-indent: 0;
+}
