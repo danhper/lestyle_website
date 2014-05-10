@@ -8,7 +8,7 @@
           <%= simple_format @about_title.content, {}, wrapper_tag: 'span' %>
         </p>
         <%= simple_format @about_content.content %>
-        <%= link_to 'more', about_path, class: 'btn' %>
+        <%= link_to 'more', about_path, class: 'btn', data: { no_turbolink: true} %>
       </div>
       <div class="grid_4">
         <h3>events</h3>

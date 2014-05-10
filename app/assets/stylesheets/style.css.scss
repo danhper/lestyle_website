@@ -9,9 +9,10 @@
 @import url(//fonts.googleapis.com/css?family=Ubuntu:700);
 @import url(//fonts.googleapis.com/css?family=Cookie);
 
+$foreground-color: #e9dfdf;
+
 html {
 	width: 100%;
-
 }
 
 a[href^="tel:"] {
@@ -1143,5 +1144,11 @@ h2 {
 
     p {
         font-size: 14pt;
+        color: $foreground-color;
     }
+}
+
+footer .fright address {
+    font-size: 16pt;
+    color: $foreground-color;
 }
