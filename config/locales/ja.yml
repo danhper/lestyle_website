@@ -1,0 +1,8 @@
+ja:
+  date:
+    formats:
+      long: ! '%Y/%m/%d'
+  time:
+    formats:
+      long: ! '%Y/%m/%d %H:%M:%S %z'
+      only_date: ! '%Y年%m月%d日'
