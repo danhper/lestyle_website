@@ -1,9 +1,9 @@
 <div class="block1">
   <time datetime="2014-01-01">
-    <%= event.created_at.strftime('%d') %>
+    <%= event.get_date.strftime('%d') %>
     <span>
-      <span class="col1"><%= event.created_at.strftime('%-m') %>月</span>
-      <span><%= event.created_at.strftime('%Y') %></span>
+      <span class="col1"><%= event.get_date.strftime('%-m') %>月</span>
+      <span><%= event.get_date.strftime('%Y') %></span>
     </span>
   </time>
   <div class="extra_wrapper">
