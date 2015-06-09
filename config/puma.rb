@@ -16,6 +16,8 @@ stdout_redirect '/home/lestyle/lestyle_website/log/puma.stdout', '/home/lestyle/
 
 bind 'unix:///home/lestyle/lestyle_website/tmp/sockets/puma.sock'
 
+preload_app!
+
 on_worker_boot do
   ActiveRecord::Base.establish_connection
 end
