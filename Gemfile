@@ -23,6 +23,7 @@ gem 'rails_admin-i18n'
 gem 'devise-i18n'
 
 gem 'puma'
+gem 'figaro'
 
 group :development, :test do
   gem 'annotate'
