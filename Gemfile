@@ -22,11 +22,12 @@ gem 'rails-i18n'
 gem 'rails_admin-i18n'
 gem 'devise-i18n'
 
+gem 'puma'
 
 group :development, :test do
   gem 'annotate'
   gem 'spring'
-  gem 'jazz_hands'
+  gem 'jazz_fingers'
 end
 
 group :development do
